@@ -5,7 +5,7 @@ from torch.nn.utils.rnn import pack_padded_sequence
 from torch import nn
 import random
 is_train_set = True
-file_name = 'data/train_data_cls.txt' if is_train_set else 'data/eval_data_cls.txt'
+file_name = '../data/train_data_cls.txt' if is_train_set else '../data/eval_data_cls.txt'
 with open(file_name, 'rt') as f:
     reader = f.readlines()
     rows = list(reader)
@@ -19,7 +19,7 @@ for _ in range(30):
 class NameDataset(Dataset):
     def __init__(self, is_train_set=True):
     	# 指定训练集和测试集
-        file_name = 'data/train_data_cls.txt' if is_train_set else 'data/eval_data_cls.txt'
+        file_name = '../data/train_data_cls.txt' if is_train_set else '../data/eval_data_cls.txt'
         with open(file_name, 'rt') as f:
             reader = f.readlines()
             rows = list(reader)
